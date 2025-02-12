@@ -1,0 +1,81 @@
+.navbar-custom {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    /* Altura fija */
+    z-index: 1030;
+    background-color: #000;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.98) !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    height: 70px;
+    /* Altura reducida al hacer scroll */
+}
+
+/* Ajuste para contenido principal */
+
+.navbar-custom .navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-custom .navbar-brand {
+    color: white !important;
+}
+
+.navbar-brand,
+.offcanvas-title {
+    color: #F8F9FA;
+    /* Color claro para el texto */
+}
+
+.navbar-toggler {
+    border-color: #F8F9FA;
+    /* Color claro para el borde del toggler */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23F8F9FA' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    /* Color verde de WhatsApp */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    width: 220px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp i,
+.btn-whatsapp1 i,
+.btn-whatsapp2 i,
+.btn-whatsapp3 i {
+    margin-right: 16px;
+    /* Aumentar el margen derecho para mayor separación */
+}
+
+.btn-whatsapp:hover {
+    background-color: #1EBE57;
+    /* Color verde más oscuro al pasar el cursor */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.btn-whatsapp i {
+    margin-right: 8px;
+}
+
+@media (max-width: 992px) {
+    .navbar-custom {
+        height: auto;
+        /* Altura automática en móviles */
+    }
+}

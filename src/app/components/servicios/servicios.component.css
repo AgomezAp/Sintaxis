@@ -1,0 +1,412 @@
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+h2 {
+    font-family: fantasy;
+    font-weight: lighter;
+    font-size: 40px;
+}
+
+/* Estilos generales */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.inicial {
+    background: #312f35;
+    /* Color de fondo */
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los bloques se ajusten a varias líneas */
+    justify-content: space-around;
+    /* Distribuye los bloques equitativamente */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bloque {
+    width: 30%;
+    /* Ancho fijo para cada bloque (3 bloques por línea) */
+    background: #000000;
+    margin-bottom: 20px;
+    /* Espacio entre bloques */
+    border: 1px solid #ccc;
+    /* Borde opcional para los bloques */
+    padding: 20px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    opacity: 0;
+    /* Inicialmente invisibles */
+    transform: translateY(-50px)
+}
+
+.bloque.animate-block {
+    animation: land 0.8s ease-out forwards;
+}
+
+@keyframes land {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bloque:nth-child(1) {
+    animation-delay: 1.6s;
+}
+
+.bloque:nth-child(2) {
+    animation-delay: 1.9s;
+}
+
+.bloque:nth-child(3) {
+    animation-delay: 2.2s;
+}
+
+.bloque img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* Evita espacio en blanco debajo de la imagen */
+    margin-bottom: 10px;
+}
+
+.texto {
+    text-align: center;
+    /* Centrar el texto dentro del bloque */
+}
+
+.medio {
+    background: #000000;
+    padding: 80px 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    /* Espacio entre los elementos */
+}
+
+/* Estilos de los signos < y > */
+.side-icon {
+    width: 150px;
+    /* Ajusta el tamaño */
+    height: auto;
+}
+
+.left-icon {
+    transform: rotate(0deg);
+    /* Asegura que esté bien posicionado */
+}
+
+.right-icon {
+    transform: rotate(0deg);
+    /* Asegura que esté bien posicionado */
+}
+
+/* Contenedor de las tarjetas */
+.contenedor {
+    display: flex;
+    gap: 30px;
+    /* Espaciado entre las tarjetas */
+}
+
+/* Estilos de cada tarjeta */
+.bloque2 {
+    background: #2d2d2d;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    /* Tamaño fijo */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transform: translateY(30px);
+    /* Inicia ligeramente abajo */
+    transition: opacity 1.6s ease-out, transform 1.6s ease-out;
+}
+
+.bloque2.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animación para los íconos laterales */
+.side-icon {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.left-icon {
+    transform: translateX(-50px);
+    /* Inicia fuera a la izquierda */
+}
+
+.right-icon {
+    transform: translateX(50px);
+    /* Inicia fuera a la derecha */
+}
+
+/* Activa íconos cuando la sección está visible */
+.side-icon.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Imagen dentro de cada tarjeta */
+.bloque2 img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Textos dentro de las tarjetas */
+.texto {
+    text-align: center;
+}
+
+.why-choose-section {
+    background: #312f35;
+    padding: 80px 20px;
+    color: white;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contenedor para logo y texto */
+.logo-text-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Logo a la izquierda */
+.logo-container {
+    flex: 0 0 200px;
+    /* Puedes ajustar este ancho según convenga */
+}
+
+.section-logo {
+    width: 300px;
+    height: 350px;
+}
+
+/* Contenido de texto a la derecha */
+.text-content {
+    flex: 1;
+    text-align: center;
+
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: center;
+align-items: center;
+}
+
+.btn-cotizar {
+    background: #25D366;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.24rem;
+    font-weight: bold;
+    height: 40px;
+    width: 220px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    
+    /* Centrado completo */
+    display: inline-flex;  /* o flex */
+    align-items: center;   /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+}
+
+.btn-cotizar:hover {
+    background: #505050;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Texto adicional debajo del bloque principal */
+.additional-content {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 11px solid rgba(255, 255, 255, 0.9);
+    font-style: italic;
+
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    /* Color verde de WhatsApp */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    width: 220px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+
+
+.custom-btn {
+    border-radius: 20px;
+    /* Bordes redondeados */
+    transition: all 0.3s ease;
+    /* Transición suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+}
+
+.custom-btn:hover {
+    transform: translateY(-2px);
+    /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    /* Sombra más intensa */
+}
+
+.btn-outline-light {
+    color: #F8F9FA;
+    /* Color claro para el texto */
+    border-color: #F8F9FA;
+    /* Color claro para el borde */
+}
+
+.main-footer {
+    background-color: #000000;
+    color: white;
+    padding: 40px 20px;
+    overflow: hidden;
+}
+
+.footer-top {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    /* Ajustes generales */
+    .inicial,
+    .medio,
+    .why-choose-section {
+        padding: 40px 15px;
+        margin-top: 60px;
+    }
+
+    /* Sección Inicial - 3 bloques */
+    .contenedor {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .bloque {
+        width: 100% !important;
+        margin: 0;
+        border-radius: 25px;
+        padding: 15px;
+
+    }
+
+    /* Sección Medio - 2 bloques */
+    .medio {
+        flex-direction: column;
+        padding: 40px 15px;
+    }
+
+    .side-icon {
+        display: none;
+        /* Ocultar íconos laterales en móvil */
+    }
+
+    .bloque2 {
+        width: 100% !important;
+        margin: 15px 0;
+        box-shadow: none;
+    }
+
+    /* Sección Why Choose */
+    .logo-text-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-container {
+        margin-bottom: 30px;
+    }
+
+    .section-logo {
+        width: 200px;
+        height: auto;
+    }
+
+    .text-content {
+        text-align: center;
+    }
+
+    .btn-cotizar {
+        margin: 0 auto;
+    }
+
+    /* Footer */
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+/* Mejoras adicionales para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .bloque {
+        width: 45% !important;
+    }
+
+    .bloque2 {
+        width: 45% !important;
+    }
+}

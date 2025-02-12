@@ -1,0 +1,464 @@
+/* ===== ESTILOS DEL NAVBAR (NO MODIFICAR) ===== */
+.navbar-custom {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    background-color: #000;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.95) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+/* Ajuste para contenido principal */
+
+
+.navbar-custom .navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-custom .navbar-brand {
+    color: white !important;
+}
+
+a {
+    color: #ffffff !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-size: 20px;
+}
+
+h1 {
+    font-weight: 50px;
+    font-size: 60px;
+}
+
+.text-wrapper h1 {
+    margin-bottom: 40px;
+    /* Separación de 40px entre h1 y p */
+}
+
+/* ===== NUEVOS ESTILOS PARA LAS SECCIONES ===== */
+/* home.component.css */
+:host {
+    display: block;
+    overflow-x: hidden;
+    /* Elimina scroll horizontal */
+}
+
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.full-width-section {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 80px 20px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.bg-custom-black {
+    background: #000;
+    color: white;
+}
+
+.bg-custom-gray {
+    background: #2d2d2d;
+    color: white;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    justify-content: space-between;
+    /* Distribuir el espacio entre los elementos */
+}
+
+.content-wrapper.reverse {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    justify-content: space-between;
+    /* Distribuir el espacio entre los elementos */
+}
+
+.text-wrapper.reverse {
+    flex: 1;
+    padding: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+    align-items: center;
+}
+
+.text-wrapper {
+    flex: 1;
+    padding: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+    align-items: center;
+    text-align: center;
+    /* Centrar el texto */
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Agregar esto para corregir el orden del texto */
+.reverse .text-wrapper {
+    order: -1;
+    flex: 1;
+    padding: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+    align-items: center;
+}
+
+.image-wrapper {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.section-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transform: scale(1.05);
+    transition: transform 0.8s ease;
+}
+
+.text-wrapper {
+    flex: 1;
+    padding: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+    align-items: center;
+}
+
+.btn-comprar {
+    background: #007bff;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-comprar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Animaciones */
+[data-animation].animate .text-wrapper,
+[data-animation].animate .section-image {
+    opacity: 1;
+    transform: none;
+}
+
+.main-footer {
+    background-color: #000000;
+    /* Color de fondo negro */
+    color: white;
+    /* Color del texto blanco */
+    padding: 40px 20px;
+    overflow: hidden;
+}
+
+.footer-top {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    /* Color de los enlaces blanco */
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
+}
+
+.footer-location p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #cccccc;
+}
+
+/* Estilos del carrusel */
+.logos-section {
+    background: #2d2d2d;
+    padding: 40px 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Carrusel */
+.payment-carousel {
+    max-width: 75%;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    width: 75%;
+    /* Asegurar que el track ocupe el 100% del contenedor */
+    animation: carousel-scroll 10s linear infinite;
+    padding: 20px 0;
+    justify-content: center;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 0 40px;
+}
+
+.payment-method img {
+    height: 90px;
+    /* Altura aumentada */
+    width: auto;
+    filter: none;
+    /* Mostrar colores originales */
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.payment-method img:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    /* Color verde de WhatsApp */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    width: 220px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp1 {
+    background-color: #25D366;
+    /* Color verde de WhatsApp */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    width: 220px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp2 {
+    background-color: #25D366;
+    /* Color verde de WhatsApp */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    width: 220px;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp3 {
+    background-color: #25D366;
+    /* Color verde de WhatsApp */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    width: 220px;
+    gap: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp i,
+.btn-whatsapp1 i,
+.btn-whatsapp2 i,
+.btn-whatsapp3 i {
+    margin-right: 16px;
+    /* Aumentar el margen derecho para mayor separación */
+}
+
+.btn-whatsapp:hover {
+    background-color: #1EBE57;
+    /* Color verde más oscuro al pasar el cursor */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.btn-whatsapp1:hover {
+    background-color: #1EBE57;
+    /* Color verde más oscuro al pasar el cursor */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.btn-whatsapp2:hover {
+    background-color: #1EBE57;
+    /* Color verde más oscuro al pasar el cursor */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.btn-whatsapp3:hover {
+    background-color: #1EBE57;
+    /* Color verde más oscuro al pasar el cursor */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.btn-whatsapp i {
+    margin-right: 8px;
+}
+
+.navbar-brand, .offcanvas-title {
+    color: #F8F9FA; /* Color claro para el texto */
+  }
+  
+  .navbar-toggler {
+    border-color: #F8F9FA; /* Color claro para el borde del toggler */
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23F8F9FA' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  .offcanvas {
+    background-color: #1F2933; /* Color oscuro */
+  }
+  
+  .custom-btn {
+    border-radius: 20px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Transición suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  .custom-btn:hover {
+    transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra más intensa */
+  }
+  
+  .btn-outline-light {
+    color: #F8F9FA; /* Color claro para el texto */
+    border-color: #F8F9FA; /* Color claro para el borde */
+  }
+/* Animación */
+@keyframes carousel-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Mover el 50% del ancho total */
+    }
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+        margin: -50px;
+    }
+
+    .image-wrapper,
+    .text-wrapper {
+        order: initial !important;
+        text-align: center;
+    }
+
+    .content-wrapper.reverse {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        max-width: 1200px;
+        margin: -50px;
+        padding: 2rem;
+        justify-content: space-between;
+    }
+
+    .text-wrapper {
+        padding: 20px 15px;
+    }
+
+    .section-image {
+        height: 300px;
+        width: 100%;
+        margin-right: 20px;
+    }
+
+    .btn-comprar {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.1em;
+    }
+
+    /* Asegurar animaciones en móvil */
+    [data-animation].animate .text-wrapper,
+    [data-animation].animate .section-image {
+        opacity: 1;
+        transform: none !important;
+    }
+}

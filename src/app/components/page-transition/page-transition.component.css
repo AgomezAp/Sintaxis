@@ -1,0 +1,80 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh; /* Usa altura dinámica para móviles */
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  touch-action: none; /* Bloquea interacciones táctiles */
+  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
+}
+
+.logo {
+  width: 80vw; /* Ancho relativo al viewport */
+  max-width: 300px; /* Límite máximo para móviles */
+  opacity: 0;
+  animation: mobileLogoEntrance 0.6s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.3s forwards;
+}
+
+/* Animación optimizada para móviles */
+@keyframes mobileLogoEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  80% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Spinner de carga para móviles */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  margin-top: 20px;
+  border: 3px solid rgba(0,0,0,0.1);
+  border-radius: 50%;
+  border-top-color: #25D366;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Mejoras para dispositivos móviles */
+@media (max-width: 768px) {
+  .overlay {
+    background: #f8f9fa; /* Fondo más suave para móviles */
+  }
+  
+  .logo {
+    width: 70vw;
+    max-width: 250px;
+  }
+
+  /* Ajuste para teclados virtuales */
+  @media (max-height: 500px) {
+    .logo {
+      max-width: 200px;
+    }
+  }
+}
+
+/* Prevención de zoom en dispositivos móviles */
+@viewport {
+  width: device-width;
+  zoom: 1;
+  min-zoom: 1;
+  max-zoom: 1;
+}

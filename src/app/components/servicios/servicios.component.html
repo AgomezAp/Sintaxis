@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <app-navbar></app-navbar>
+    <main>
+      <section class="inicial" @fadeInOut #section>
+        <div class="contenedor">
+          <div class="bloque animate-block">
+            <img src="/Pagina2-1.png" alt="Imagen 1" />
+            <div class="texto">
+              <h2>Páginas Web</h2>
+              <p>Desde 550.000</p>
+            </div>
+          </div>
+          <div class="bloque animate-block">
+            <img src="/Pagina2-2.png" alt="Imagen 2" />
+            <div class="texto">
+              <h2>Automatización</h2>
+              <p>Ideal para la mejora de tus </p>
+              <p>procesos empresariales </p>
+            </div>
+          </div>
+          <div class="bloque animate-block">
+            <img src="/Pagina2-3.png" alt="Imagen 3" />
+            <div class="texto">
+              <h2>Desarrollo</h2>
+              <p>Desarrollos personalizados;</p>
+              <p>plasmamos tú idea en una</p>
+              <p>Web</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="medio" #section>
+        <img src="/elementomenor.png" alt="Elemento Menor" class="side-icon left-icon animate-icon" />
+        
+        <div class="contenedor">
+          <div class="bloque2 animate-block"> <!-- Clase animate-block -->
+            <img src="/Pagina2-4.png" alt="Imagen 1" />
+            <div class="texto">
+              <h2>Asesoría</h2>
+              <p>Si tienes código fuente</p>
+              <p>podemos revisarlo y darte</p>
+              <p>opciones de mejora</p>
+            </div>
+          </div>
+      
+          <div class="bloque2 animate-block"> <!-- Clase animate-block -->
+            <img src="/Pagina2-5.png" alt="Imagen 2" />
+            <div class="texto">
+              <h2>Aplicativos</h2>
+              <p>Desarrollo e innovación para </p>
+              <p>dispositivos electrónicos</p>
+            </div>
+          </div>
+        </div>
+      
+        <img src="/elementomayor.png" alt="Elemento Mayor" class="side-icon right-icon animate-icon" />
+      </section>
+      <!-- Sección "¿Por qué elegir Sintaxis?" -->
+      <section class="why-choose-section" @fadeInOut #section>
+        <div class="content-wrapper">
+          <div class="logo-text-wrapper">
+            <!-- Logo a la izquierda -->
+            <div class="logo-container">
+              <img
+                src="/LogoSintaxisG.png"
+                alt="Sintaxis Logo"
+                class="section-logo"
+              />
+            </div>
+            <!-- Contenido de texto a la derecha -->
+            <div class="text-content">
+              <h2>¿Por qué elegir Sintaxis?</h2>
+              <p>
+                Somos expertos en desarrollo web, manejando las últimas tecnologías
+                y herramientas para crear soluciones digitales modernas, funcionales
+                y adaptadas a tus necesidades.
+              </p>
+              <button class="btn-cotizar">Cotizar</button>
+              <p>
+                No solo desarrollamos proyectos; estamos contigo a lo largo del camino.
+                Ofrecemos soporte técnico constante para que tus plataformas sigan
+                funcionando al 100%.
+              </p>
+            </div>
+          </div>
+          <!-- Bloque de texto adicional debajo del grupo principal -->
+        </div>
+      </section>
+      <footer>
+        
+      </footer>
+    </main>
+  </body>
+</html>

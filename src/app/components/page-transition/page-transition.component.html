@@ -1,0 +1,9 @@
+<div
+  class="overlay"
+  [@slideOverlay]="animationState"
+  (@slideOverlay.done)="onAnimationDone($event)"
+>
+  <div class="overlay-content">
+    <img src="/gifchevere.gif" alt="Logo" class="logo" />
+  </div>
+</div>
