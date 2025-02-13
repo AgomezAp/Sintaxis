@@ -1,0 +1,127 @@
+<div class="pdf-container">
+    <div class="pdf-content">
+      <h1>Política de Seguridad de la Información para Software</h1>
+      
+      <h2>1. Objetivo</h2>
+      <p>
+        Establecer los lineamientos y controles necesarios para garantizar la seguridad de los sistemas, aplicaciones y datos manejados por Sintaxis, protegiéndolos contra amenazas cibernéticas y asegurando su confidencialidad, integridad y disponibilidad.
+      </p>
+      
+      <h2>2. Alcance</h2>
+      <p>Esta política aplica a:</p>
+      <ul>
+        <li>Todas las aplicaciones y sistemas de software desarrollados, adquiridos o mantenidos por Sintaxis.</li>
+        <li>Equipos de desarrollo, operaciones (DevOps), seguridad y calidad.</li>
+        <li>Proveedores externos que desarrollen o mantengan software para la organización.</li>
+      </ul>
+      
+      <h2>3. Principios de Seguridad de Software</h2>
+      <ul>
+        <li><strong>Seguridad por Diseño:</strong> Integrar la seguridad desde las fases iniciales del desarrollo.</li>
+        <li><strong>Defensa en Profundidad:</strong> Implementar múltiples capas de seguridad para proteger los sistemas.</li>
+        <li><strong>Mínimo Privilegio:</strong> Limitar los permisos de acceso a lo estrictamente necesario.</li>
+        <li><strong>Auditoría y Monitoreo:</strong> Registrar y supervisar todas las actividades críticas.</li>
+        <li><strong>Actualización Continua:</strong> Mantener el software y sus dependencias actualizadas.</li>
+      </ul>
+      
+      <h2>4. Roles y Responsabilidades</h2>
+      <ul>
+        <li><strong>Equipo de Desarrollo:</strong> Implementar prácticas de codificación segura y cumplir con los estándares de seguridad.</li>
+        <li><strong>Equipo de Seguridad:</strong> Realizar pruebas de penetración, revisar código y gestionar vulnerabilidades.</li>
+        <li><strong>Equipo de Operaciones (DevOps):</strong> Asegurar la configuración segura de servidores, redes y bases de datos.</li>
+        <li><strong>Gerencia de Proyectos:</strong> Garantizar que la seguridad sea una prioridad en todos los proyectos.</li>
+      </ul>
+      
+      <h2>5. Controles de Seguridad para Software</h2>
+      <h3>5.1. Desarrollo Seguro</h3>
+      <ul>
+        <li><strong>Requisitos de Seguridad:</strong> Definir requisitos de seguridad en la fase de diseño.</li>
+        <li><strong>Código Seguro:</strong> Seguir las mejores prácticas de OWASP para evitar vulnerabilidades comunes (ej.: inyecciones SQL, XSS).</li>
+        <li><strong>Revisión de Código:</strong> Realizar revisiones de código para identificar y corregir vulnerabilidades.</li>
+        <li><strong>Pruebas de Seguridad:</strong> Ejecutar pruebas automatizadas (SAST, DAST) y manuales (pentesting).</li>
+      </ul>
+      
+      <h3>5.2. Gestión de Dependencias</h3>
+      <ul>
+        <li><strong>Librerías y Frameworks:</strong> Usar solo librerías y frameworks de fuentes confiables y mantenerlos actualizados.</li>
+        <li><strong>Escaneo de Vulnerabilidades:</strong> Escanear dependencias en busca de vulnerabilidades conocidas (ej.: usando OWASP Dependency-Check).</li>
+      </ul>
+      
+      <h3>5.3. Autenticación y Autorización</h3>
+      <ul>
+        <li><strong>Autenticación Multifactor (MFA):</strong> Implementar MFA para acceder a sistemas críticos.</li>
+        <li><strong>Gestión de Sesiones:</strong> Asegurar que las sesiones tengan tiempos de expiración y sean invalidadas después del cierre.</li>
+        <li><strong>Control de Acceso Basado en Roles (RBAC):</strong> Limitar el acceso según los roles y responsabilidades.</li>
+      </ul>
+      
+      <h3>5.4. Protección de Datos</h3>
+      <ul>
+        <li><strong>Cifrado:</strong> Cifrar datos sensibles en reposo (AES-256) y en tránsito (TLS 1.2/1.3).</li>
+        <li><strong>Máscara de Datos:</strong> Ocultar información sensible en entornos de prueba y desarrollo.</li>
+        <li><strong>Eliminación Segura:</strong> Garantizar que los datos se eliminen de manera segura cuando ya no sean necesarios.</li>
+      </ul>
+      
+      <h3>5.5. Configuración Segura</h3>
+      <ul>
+        <li><strong>Hardening:</strong> Aplicar configuraciones seguras en servidores, bases de datos y aplicaciones.</li>
+        <li><strong>Gestión de Parches:</strong> Aplicar parches de seguridad de manera oportuna.</li>
+        <li><strong>Monitoreo Continuo:</strong> Implementar herramientas de monitoreo para detectar actividades sospechosas.</li>
+      </ul>
+      
+      <h2>6. Gestión de Vulnerabilidades</h2>
+      <ul>
+        <li><strong>Identificación:</strong> Escanear aplicaciones y sistemas en busca de vulnerabilidades.</li>
+        <li><strong>Clasificación:</strong> Priorizar vulnerabilidades según su criticidad (ej.: CVSS score).</li>
+        <li><strong>Remediación:</strong> Corregir vulnerabilidades en plazos definidos (ej.: críticas en 24 horas, altas en 7 días).</li>
+        <li><strong>Verificación:</strong> Validar que las vulnerabilidades hayan sido corregidas.</li>
+      </ul>
+      
+      <h2>7. Respuesta a Incidentes</h2>
+      <ul>
+        <li><strong>Detección:</strong> Monitoreo proactivo para identificar posibles incidentes.</li>
+        <li><strong>Contención:</strong> Aislar sistemas afectados para evitar la propagación.</li>
+        <li><strong>Investigación:</strong> Analizar causas y impactos del incidente.</li>
+        <li><strong>Recuperación:</strong> Restaurar sistemas y datos afectados.</li>
+        <li><strong>Mejora:</strong> Implementar medidas para prevenir incidentes similares.</li>
+      </ul>
+      
+      <h2>8. Cumplimiento Legal y Normativo</h2>
+      <ul>
+        <li><strong>Ley 1581 de 2012 (Colombia):</strong> Protección de datos personales en aplicaciones.</li>
+        <li><strong>GDPR (UE):</strong> Cumplimiento con requisitos de privacidad y seguridad para ciudadanos europeos.</li>
+        <li><strong>PCI DSS:</strong> Cumplimiento con estándares de seguridad para aplicaciones que manejen datos de tarjetas de crédito.</li>
+        <li><strong>ISO/IEC 27034:</strong> Seguridad en el desarrollo de aplicaciones.</li>
+      </ul>
+      
+      <h2>9. Capacitación y Concientización</h2>
+      <ul>
+        <li><strong>Programas de Capacitación:</strong> Entrenar a los desarrolladores en prácticas de codificación segura.</li>
+        <li><strong>Simulacros de Incidentes:</strong> Realizar ejercicios prácticos para mejorar la respuesta a incidentes.</li>
+        <li><strong>Concientización:</strong> Promover una cultura de seguridad entre todos los colaboradores.</li>
+      </ul>
+      
+      <h2>10. Sanciones</h2>
+      <ul>
+        <li><strong>Incumplimiento de la Política:</strong> Los colaboradores que no cumplan con esta política estarán sujetos a sanciones, que pueden incluir advertencias, suspensión o terminación del contrato.</li>
+        <li><strong>Responsabilidad Civil o Penal:</strong> En casos graves, se podrán tomar acciones legales contra los responsables.</li>
+      </ul>
+      
+      <h2>11. Revisión y Actualización</h2>
+      <p>
+        Esta política será revisada anualmente o cuando se produzcan cambios significativos en la legislación, la tecnología o los riesgos asociados al software. Las actualizaciones serán comunicadas a todos los colaboradores.
+      </p>
+      
+      <h2>12. Aprobación</h2>
+      <p>
+        Esta política fue aprobada por la Gerencia General de Sintaxis el 12/02/2025.
+      </p>
+      
+      <h2>Anexos</h2>
+      <ul>
+        <li>Lista de Verificación de Seguridad en el Desarrollo: Pasos para garantizar la seguridad en cada fase del ciclo de vida del software.</li>
+        <li>Top 10 de OWASP: Lista de las vulnerabilidades más críticas en aplicaciones web.</li>
+        <li>Procedimiento de Gestión de Vulnerabilidades: Pasos detallados para identificar, clasificar y corregir vulnerabilidades.</li>
+      </ul>
+    </div>
+  </div>
+  
